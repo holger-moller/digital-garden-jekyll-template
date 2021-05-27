@@ -1,0 +1,1239 @@
+ruby 3.0.1p64 (2021-04-05 revision 0fb782ee38) [x64-mingw32]
+
+C:\Users\Holger>cd \
+
+C:\>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\
+
+25.04.2021  09:05    <DIR>          AMD
+29.10.2019  19:18    <DIR>          HOLGER
+29.10.2019  15:11    <DIR>          Intel
+29.10.2019  19:20    <DIR>          MERET
+07.12.2019  11:14    <DIR>          PerfLogs
+11.05.2021  10:57    <DIR>          Program Files
+02.05.2021  15:36    <DIR>          Program Files (x86)
+25.05.2021  11:21    <DIR>          Ruby30-x64
+26.05.2021  08:36    <DIR>          rubygems-3.2.18
+16.07.2020  11:02    <DIR>          TEMP
+25.04.2021  09:08    <DIR>          Users
+15.05.2021  21:14    <DIR>          Windows
+               0 Datei(en),              0 Bytes
+              12 Verzeichnis(se), 295.109.017.600 Bytes frei
+
+C:\>cd rubygems-3.2.18
+
+C:\rubygems-3.2.18>ruby setup.rb
+  Successfully built RubyGem
+  Name: bundler
+  Version: 2.2.18
+  File: bundler-2.2.18.gem
+Bundler 2.2.18 installed
+RubyGems 3.2.18 installed
+Regenerating binstubs
+Regenerating plugins
+Parsing documentation for rubygems-3.2.18
+Installing ri documentation for rubygems-3.2.18
+
+# 3.2.18 / 2021-05-25
+
+## Enhancements:
+
+* Don't leave temporary directory around when building extensions to
+  improve build reproducibility. Pull request #4610 by baloo
+
+# 3.2.17 / 2021-05-05
+
+## Enhancements:
+
+* Only print month & year in deprecation messages. Pull request #3085 by
+  Schwad
+* Make deprecate method support ruby3's keyword arguments. Pull request
+  #4558 by mame
+* Update the default bindir on macOS. Pull request #4524 by nobu
+* Prefer File.open instead of Kernel#open. Pull request #4529 by mame
+
+## Documentation:
+
+* Fix usage messages to reflect the current POSIX-compatible behaviour.
+  Pull request #4551 by graywolf-at-work
+
+# 3.2.16 / 2021-04-08
+
+## Bug fixes:
+
+* Correctly handle symlinks. Pull request #2836 by voxik
+
+# 3.2.15 / 2021-03-19
+
+## Enhancements:
+
+* Prevent downgrades to untested rubygems versions. Pull request #4460 by
+  deivid-rodriguez
+
+## Bug fixes:
+
+* Fix missing require breaking `gem cert`. Pull request #4464 by lukehinds
+
+# 3.2.14 / 2021-03-08
+
+## Enhancements:
+
+* Less wrapping of network errors. Pull request #4064 by deivid-rodriguez
+
+## Bug fixes:
+
+* Revert addition of support for `musl` variants to restore graceful
+  fallback on Alpine. Pull request #4434 by deivid-rodriguez
+
+# 3.2.13 / 2021-03-03
+
+## Bug fixes:
+
+* Support non-gnu libc linux platforms. Pull request #4082 by lloeki
+
+# 3.2.12 / 2021-03-01
+
+## Bug fixes:
+
+* Restore the ability to manually install extension gems. Pull request
+  #4384 by cfis
+
+# 3.2.11 / 2021-02-17
+
+## Enhancements:
+
+* Optionally fallback to IPv4 when IPv6 is unreachable. Pull request #2662
+  by sonalkr132
+
+# 3.2.10 / 2021-02-15
+
+## Documentation:
+
+* Add a `gem push` example to `gem help`. Pull request #4373 by
+  deivid-rodriguez
+* Improve documentation for `required_ruby_version`. Pull request #4343 by
+  AlexWayfer
+
+# 3.2.9 / 2021-02-08
+
+## Bug fixes:
+
+* Fix error message when underscore selection can't find bundler. Pull
+  request #4363 by deivid-rodriguez
+* Fix `Gem::Specification.stubs_for` returning wrong named specs. Pull
+  request #4356 by tompng
+* Don't error out when activating a binstub unless necessary. Pull request
+  #4351 by deivid-rodriguez
+* Fix `gem outdated` incorrectly handling platform specific gems. Pull
+  request #4248 by deivid-rodriguez
+
+# 3.2.8 / 2021-02-02
+
+## Bug fixes:
+
+* Fix `gem install` crashing on gemspec with nil required_ruby_version.
+  Pull request #4334 by pbernays
+
+# 3.2.7 / 2021-01-26
+
+## Bug fixes:
+
+* Generate plugin wrappers with relative requires. Pull request #4317 by
+  deivid-rodriguez
+
+# 3.2.6 / 2021-01-18
+
+## Enhancements:
+
+* Fix `Gem::Platform#inspect` showing duplicate information. Pull request
+  #4276 by deivid-rodriguez
+
+## Bug fixes:
+
+* Swallow any system call error in `ensure_gem_subdirs` to support jruby
+  embedded paths. Pull request #4291 by kares
+* Restore accepting custom make command with extra options as the `make`
+  env variable. Pull request #4271 by terceiro
+
+# 3.2.5 / 2021-01-11
+
+## Bug fixes:
+
+* Don't load more specs after the whole set of specs has been setup. Pull
+  request #4262 by deivid-rodriguez
+* Fix broken `bundler` executable after `gem update --system`. Pull
+  request #4221 by deivid-rodriguez
+
+# 3.2.4 / 2020-12-31
+
+## Enhancements:
+
+* Use a CHANGELOG in markdown for rubygems. Pull request #4168 by
+  deivid-rodriguez
+* Never spawn subshells when building extensions. Pull request #4190 by
+  deivid-rodriguez
+
+## Bug fixes:
+
+* Fix fallback to the old index and installation from it not working. Pull
+  request #4213 by deivid-rodriguez
+* Fix installing from source on truffleruby. Pull request #4201 by
+  deivid-rodriguez
+
+# 3.2.3 / 2020-12-22
+
+## Enhancements:
+
+* Fix misspellings in default API key name. Pull request #4177 by hsbt
+
+## Bug fixes:
+
+* Respect `required_ruby_version` and `required_rubygems_version`
+  constraints when looking for `gem install` candidates. Pull request #4110
+  by deivid-rodriguez
+
+# 3.2.2 / 2020-12-17
+
+## Bug fixes:
+
+* Fix issue where CLI commands making more than one request to
+  rubygems.org needing an OTP code would crash or ask for the code twice.
+  Pull request #4162 by sonalkr132
+* Fix building rake extensions that require openssl. Pull request #4165 by
+  deivid-rodriguez
+* Fix `gem update --system` displaying too many changelog entries. Pull
+  request #4145 by deivid-rodriguez
+
+# 3.2.1 / 2020-12-14
+
+## Enhancements:
+
+* Added help message for gem i webrick in gem server command. Pull request
+  #4117 by hsbt
+
+## Bug fixes:
+
+* Added the missing loading of fileutils same as load_specs. Pull request
+  #4124 by hsbt
+* Fix Resolver::APISet to always include prereleases when necessary. Pull
+  request #4113 by deivid-rodriguez
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+        C:/Ruby30-x64/bin/gem
+        C:/Ruby30-x64/bin/bundle
+        C:/Ruby30-x64/bin/bundler
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+
+C:\rubygems-3.2.18>$ git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+Der Befehl "$" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\rubygems-3.2.18>cd \
+
+C:\>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\
+
+25.04.2021  09:05    <DIR>          AMD
+29.10.2019  19:18    <DIR>          HOLGER
+29.10.2019  15:11    <DIR>          Intel
+29.10.2019  19:20    <DIR>          MERET
+07.12.2019  11:14    <DIR>          PerfLogs
+11.05.2021  10:57    <DIR>          Program Files
+02.05.2021  15:36    <DIR>          Program Files (x86)
+25.05.2021  11:21    <DIR>          Ruby30-x64
+26.05.2021  08:36    <DIR>          rubygems-3.2.18
+16.07.2020  11:02    <DIR>          TEMP
+25.04.2021  09:08    <DIR>          Users
+15.05.2021  21:14    <DIR>          Windows
+               0 Datei(en),              0 Bytes
+              12 Verzeichnis(se), 295.092.387.840 Bytes frei
+
+C:\>cd "Program Files"
+
+C:\Program Files>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files
+
+11.05.2021  10:57    <DIR>          .
+11.05.2021  10:57    <DIR>          ..
+25.04.2021  09:06    <DIR>          AMD
+25.04.2021  09:07    <DIR>          ATI Technologies
+05.10.2020  10:43    <DIR>          Avidemux 2.7 VC++ 64bits
+29.10.2019  15:22    <DIR>          CDBurnerXP
+29.10.2019  15:08    <DIR>          Classic Shell
+25.04.2021  09:56    <DIR>          Common Files
+25.04.2021  09:56    <DIR>          CONEXANT
+11.05.2021  10:58    <DIR>          Git
+02.12.2020  09:55    <DIR>          Google
+25.04.2021  09:56    <DIR>          Intel
+07.12.2019  16:51    <DIR>          Internet Explorer
+12.11.2019  14:30    <DIR>          IrfanView
+02.03.2021  18:28    <DIR>          McAfee
+30.10.2019  17:39    <DIR>          McAfee.com
+17.05.2021  09:59    <DIR>          Microsoft Office
+03.11.2019  18:32    <DIR>          Microsoft Office 15
+30.04.2021  20:30    <DIR>          Microsoft Update Health Tools
+07.12.2019  11:14    <DIR>          ModifiableWindowsApps
+06.05.2021  16:44    <DIR>          Mozilla Firefox
+25.04.2021  09:00    <DIR>          MSBuild
+29.10.2019  15:35    <DIR>          paint.net
+29.10.2019  19:28    <DIR>          PDFCreator
+25.04.2021  09:06    <DIR>          Realtek
+25.04.2021  09:00    <DIR>          Reference Assemblies
+25.04.2021  09:50    <DIR>          Synaptics
+01.11.2019  21:19    <DIR>          TextPad 8
+25.04.2021  09:56    <DIR>          UNP
+29.10.2019  15:11    <DIR>          VideoLAN
+23.11.2020  12:36    <DIR>          VLC Plus Player
+25.04.2021  09:49    <DIR>          Windows Defender
+25.04.2021  09:38    <DIR>          Windows Mail
+25.04.2021  09:38    <DIR>          Windows Media Player
+07.12.2019  16:54    <DIR>          Windows Multimedia Platform
+25.04.2021  09:50    <DIR>          Windows NT
+25.04.2021  09:38    <DIR>          Windows Photo Viewer
+07.12.2019  16:54    <DIR>          Windows Portable Devices
+07.12.2019  11:31    <DIR>          Windows Security
+07.12.2019  11:31    <DIR>          WindowsPowerShell
+29.10.2019  15:05    <DIR>          WinRAR
+               0 Datei(en),              0 Bytes
+              41 Verzeichnis(se), 295.092.293.632 Bytes frei
+
+C:\Program Files>dir ?
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files
+
+11.05.2021  10:57    <DIR>          .
+11.05.2021  10:57    <DIR>          ..
+               0 Datei(en),              0 Bytes
+               2 Verzeichnis(se), 295.092.326.400 Bytes frei
+
+C:\Program Files>dir /help
+Ungültige Option - "help".
+
+C:\Program Files>dir -help
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files
+
+Datei nicht gefunden
+
+C:\Program Files>dir | more
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files
+
+11.05.2021  10:57    <DIR>          .
+11.05.2021  10:57    <DIR>          ..
+25.04.2021  09:06    <DIR>          AMD
+25.04.2021  09:07    <DIR>          ATI Technologies
+05.10.2020  10:43    <DIR>          Avidemux 2.7 VC++ 64bits
+29.10.2019  15:22    <DIR>          CDBurnerXP
+29.10.2019  15:08    <DIR>          Classic Shell
+25.04.2021  09:56    <DIR>          Common Files
+25.04.2021  09:56    <DIR>          CONEXANT
+11.05.2021  10:58    <DIR>          Git
+02.12.2020  09:55    <DIR>          Google
+25.04.2021  09:56    <DIR>          Intel
+07.12.2019  16:51    <DIR>          Internet Explorer
+12.11.2019  14:30    <DIR>          IrfanView
+02.03.2021  18:28    <DIR>          McAfee
+30.10.2019  17:39    <DIR>          McAfee.com
+17.05.2021  09:59    <DIR>          Microsoft Office
+03.11.2019  18:32    <DIR>          Microsoft Office 15
+30.04.2021  20:30    <DIR>          Microsoft Update Health Tools
+07.12.2019  11:14    <DIR>          ModifiableWindowsApps
+06.05.2021  16:44    <DIR>          Mozilla Firefox
+25.04.2021  09:00    <DIR>          MSBuild
+29.10.2019  15:35    <DIR>          paint.net
+29.10.2019  19:28    <DIR>          PDFCreator
+25.04.2021  09:06    <DIR>          Realtek
+25.04.2021  09:00    <DIR>          Reference Assemblies
+25.04.2021  09:50    <DIR>          Synaptics
+01.11.2019  21:19    <DIR>          TextPad 8
+25.04.2021  09:56    <DIR>          UNP
+29.10.2019  15:11    <DIR>          VideoLAN
+23.11.2020  12:36    <DIR>          VLC Plus Player
+25.04.2021  09:49    <DIR>          Windows Defender
+25.04.2021  09:38    <DIR>          Windows Mail
+25.04.2021  09:38    <DIR>          Windows Media Player
+07.12.2019  16:54    <DIR>          Windows Multimedia Platform
+25.04.2021  09:50    <DIR>          Windows NT
+25.04.2021  09:38    <DIR>          Windows Photo Viewer
+07.12.2019  16:54    <DIR>          Windows Portable Devices
+07.12.2019  11:31    <DIR>          Windows Security
+07.12.2019  11:31    <DIR>          WindowsPowerShell
+29.10.2019  15:05    <DIR>          WinRAR
+               0 Datei(en),              0 Bytes
+              41 Verzeichnis(se), 295.092.064.256 Bytes frei
+
+
+C:\Program Files>cd git
+
+C:\Program Files\Git>$ git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+Der Befehl "$" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\Program Files\Git>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+C:\Program Files\Git>git help <clone>
+Syntaxfehler.
+
+C:\Program Files\Git>git help git
+
+C:\Program Files\Git>git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+fatal: could not create work tree dir 'my-digital-garden': Permission denied
+
+C:\Program Files\Git>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files\Git
+
+11.05.2021  10:58    <DIR>          .
+11.05.2021  10:58    <DIR>          ..
+11.05.2021  10:57    <DIR>          bin
+11.05.2021  10:58    <DIR>          cmd
+11.05.2021  10:58    <DIR>          dev
+11.05.2021  10:58    <DIR>          etc
+27.03.2021  09:47           153.152 git-bash.exe
+27.03.2021  09:47           152.640 git-cmd.exe
+27.03.2021  10:10            18.765 LICENSE.txt
+11.05.2021  10:57    <DIR>          mingw64
+27.03.2021  10:10           199.375 ReleaseNotes.html
+11.05.2021  10:58    <DIR>          tmp
+11.05.2021  10:58         1.248.210 unins000.dat
+11.05.2021  10:49         3.127.720 unins000.exe
+11.05.2021  10:58            24.183 unins000.msg
+11.05.2021  10:58    <DIR>          usr
+               7 Datei(en),      4.924.045 Bytes
+               9 Verzeichnis(se), 295.091.273.728 Bytes frei
+
+C:\Program Files\Git>cd usr
+
+C:\Program Files\Git\usr>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Program Files\Git\usr
+
+11.05.2021  10:58    <DIR>          .
+11.05.2021  10:58    <DIR>          ..
+11.05.2021  10:58    <DIR>          bin
+11.05.2021  10:57    <DIR>          etc
+11.05.2021  10:57    <DIR>          lib
+11.05.2021  10:57    <DIR>          libexec
+11.05.2021  10:58    <DIR>          share
+11.05.2021  10:58    <DIR>          ssl
+               0 Datei(en),              0 Bytes
+               8 Verzeichnis(se), 295.091.208.192 Bytes frei
+
+C:\Program Files\Git\usr>cd ..
+
+C:\Program Files\Git>git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+fatal: could not create work tree dir 'my-digital-garden': Permission denied
+
+C:\Program Files\Git>path
+PATH=C:\Ruby30-x64\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Ruby30-x64\bin;C:\Users\Holger\AppData\Local\Microsoft\WindowsApps;C:\Users\Holger\AppData\Local\GitHubDesktop\bin
+
+C:\Program Files\Git>cd \
+
+C:\>$ git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+Der Befehl "$" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+C:\>git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+Cloning into 'my-digital-garden'...
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+C:\>git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+
+C:\>git clone git@github.com:holger-moller/digital-garden-jekyll-template.git my-digital-garden
+Cloning into 'my-digital-garden'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\>git clone git@github.com:holger-moller/digital-garden-jekyll-template.git C:\Users\Holger\my-digital-garden
+Cloning into 'C:\Users\Holger\my-digital-garden'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\>cd user
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\>cd holger
+
+C:\HOLGER>cd my-digital-garden
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\HOLGER>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\HOLGER
+
+29.10.2019  19:18    <DIR>          .
+29.10.2019  19:18    <DIR>          ..
+29.10.2019  17:19    <DIR>          Calibre-Bibliothek
+29.10.2019  17:45    <DIR>          Dropbox
+29.10.2019  17:47    <DIR>          Evernote
+29.10.2019  17:56    <DIR>          HM-CARD16GB
+29.10.2019  17:56    <DIR>          Snagit
+09.08.2020  09:55    <DIR>          VIDEO
+29.10.2019  19:18    <DIR>          Zoom
+               0 Datei(en),              0 Bytes
+               9 Verzeichnis(se), 294.691.987.456 Bytes frei
+
+C:\HOLGER>cd user\holger
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\HOLGER>cd user
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\HOLGER>cd benutzer
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\HOLGER>cd ..
+
+C:\>cd user
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\>cd benutzer
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\>cd \user\Holger
+Das System kann den angegebenen Pfad nicht finden.
+
+C:\>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\
+
+25.04.2021  09:05    <DIR>          AMD
+29.10.2019  19:18    <DIR>          HOLGER
+29.10.2019  15:11    <DIR>          Intel
+29.10.2019  19:20    <DIR>          MERET
+07.12.2019  11:14    <DIR>          PerfLogs
+11.05.2021  10:57    <DIR>          Program Files
+02.05.2021  15:36    <DIR>          Program Files (x86)
+25.05.2021  11:21    <DIR>          Ruby30-x64
+26.05.2021  08:36    <DIR>          rubygems-3.2.18
+16.07.2020  11:02    <DIR>          TEMP
+25.04.2021  09:08    <DIR>          Users
+15.05.2021  21:14    <DIR>          Windows
+               0 Datei(en),              0 Bytes
+              12 Verzeichnis(se), 294.691.717.120 Bytes frei
+
+C:\>cd Users
+
+C:\Users>cd Holger
+
+C:\Users\Holger>dir
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 3294-F001
+
+ Verzeichnis von C:\Users\Holger
+
+26.05.2021  09:16    <DIR>          .
+26.05.2021  09:16    <DIR>          ..
+25.05.2021  11:01    <DIR>          .atom
+21.05.2021  10:07    <DIR>          .freemind
+24.04.2021  11:23               212 .gitconfig
+26.05.2021  09:08    <DIR>          .ssh
+25.04.2021  09:56    <DIR>          3D Objects
+25.04.2021  09:56    <DIR>          Contacts
+26.05.2021  09:05    <DIR>          Desktop
+25.04.2021  17:11    <DIR>          Documents
+21.02.2021  08:44    <DIR>          Downloads
+06.04.2021  09:08    <DIR>          Dropbox
+30.10.2019  18:45    <DIR>          Evernote
+25.04.2021  09:56    <DIR>          Favorites
+17.05.2021  15:37    <DIR>          Google Drive
+25.04.2021  09:56    <DIR>          Links
+25.04.2021  09:56    <DIR>          Music
+26.05.2021  09:16    <DIR>          my-digital-garden
+17.05.2021  15:30    <DIR>          OneDrive
+25.04.2021  09:56    <DIR>          Pictures
+25.04.2021  09:56    <DIR>          Saved Games
+25.04.2021  09:56    <DIR>          Searches
+25.04.2021  09:56    <DIR>          Videos
+17.11.2019  19:15    <DIR>          WEB.DE Online-Speicher
+               1 Datei(en),            212 Bytes
+              23 Verzeichnis(se), 294.691.717.120 Bytes frei
+
+C:\Users\Holger>cd my-digital-garden
+
+C:\Users\Holger\my-digital-garden>bundle
+Fetching https://github.com/maximevaillancourt/jekyll-last-modified-at
+Fetching gem metadata from https://rubygems.org/..........
+Resolving dependencies...
+Fetching public_suffix 4.0.6
+Installing public_suffix 4.0.6
+Fetching addressable 2.7.0
+Installing addressable 2.7.0
+Using bundler 2.2.18
+Fetching colorator 1.1.0
+Installing colorator 1.1.0
+Fetching concurrent-ruby 1.1.7
+Installing concurrent-ruby 1.1.7
+Fetching eventmachine 1.2.7 (x64-mingw32)
+Installing eventmachine 1.2.7 (x64-mingw32)
+Fetching http_parser.rb 0.6.0
+Installing http_parser.rb 0.6.0 with native extensions
+Fetching em-websocket 0.5.2
+Installing em-websocket 0.5.2
+Fetching ffi 1.14.2 (x64-mingw32)
+Installing ffi 1.14.2 (x64-mingw32)
+Fetching forwardable-extended 2.6.0
+Installing forwardable-extended 2.6.0
+Fetching i18n 1.8.5
+Installing i18n 1.8.5
+Fetching sassc 2.4.0 (x64-mingw32)
+Installing sassc 2.4.0 (x64-mingw32)
+Fetching jekyll-sass-converter 2.1.0
+Installing jekyll-sass-converter 2.1.0
+Fetching rb-fsevent 0.10.4
+Installing rb-fsevent 0.10.4
+Fetching rb-inotify 0.10.1
+Installing rb-inotify 0.10.1
+Fetching listen 3.3.3
+Installing listen 3.3.3
+Fetching jekyll-watch 2.2.1
+Installing jekyll-watch 2.2.1
+Using rexml 3.2.5
+Fetching kramdown 2.3.1
+Installing kramdown 2.3.1
+Fetching kramdown-parser-gfm 1.1.0
+Installing kramdown-parser-gfm 1.1.0
+Fetching liquid 4.0.3
+Installing liquid 4.0.3
+Fetching mercenary 0.4.0
+Installing mercenary 0.4.0
+Fetching pathutil 0.16.2
+Installing pathutil 0.16.2
+Fetching rouge 3.26.0
+Installing rouge 3.26.0
+Fetching safe_yaml 1.0.5
+Installing safe_yaml 1.0.5
+Fetching unicode-display_width 1.7.0
+Installing unicode-display_width 1.7.0
+Fetching terminal-table 2.0.0
+Installing terminal-table 2.0.0
+Fetching jekyll 4.2.0
+Installing jekyll 4.2.0
+Fetching posix-spawn 0.3.15
+Installing posix-spawn 0.3.15 with native extensions
+Using jekyll-last-modified-at 1.3.0 from https://github.com/maximevaillancourt/jekyll-last-modified-at (at add-support-for-files-in-git-submodules@e0c9186)
+Fetching racc 1.5.2
+Installing racc 1.5.2 with native extensions
+Fetching nokogiri 1.11.4 (x64-mingw32)
+Installing nokogiri 1.11.4 (x64-mingw32)
+Fetching webrick 1.7.0
+Installing webrick 1.7.0
+Bundle complete! 4 Gemfile dependencies, 33 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Post-install message from i18n:
+
+HEADS UP! i18n 1.1 changed fallbacks to exclude default locale.
+But that may break your application.
+
+If you are upgrading your Rails application from an older version of Rails:
+
+Please check your Rails app for 'config.i18n.fallbacks = true'.
+If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
+'config.i18n.fallbacks = [I18n.default_locale]'.
+If not, fallbacks will be broken in your app by I18n 1.1.x.
+
+If you are starting a NEW Rails application, you can ignore this notice.
+
+For more info see:
+https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
+
+
+C:\Users\Holger\my-digital-garden>bundle exec jekyll serve
+Configuration file: C:/Users/Holger/my-digital-garden/_config.yml
+            Source: C:/Users/Holger/my-digital-garden
+       Destination: C:/Users/Holger/my-digital-garden/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 2.479 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/Holger/my-digital-garden'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2021-05-26 09:50:18
+                    _notes/Neues Textdokument.txt
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.txt
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 2 file(s) changed at 2021-05-26 09:50:30
+                    _notes/my new digital garden.md
+                    _notes/Neues Textdokument.txt
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 2 file(s) changed at 2021-05-26 09:52:17
+                    _notes/.obsidian/config
+                    _notes/.obsidian/workspace
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:52:29
+                    _notes/.obsidian/workspace
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:52:59
+                    _notes/my new digital garden.md
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:09
+                    _notes/my new digital garden.md
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:14
+                    _notes/my new digital garden.md
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:18
+                    _notes/my new digital garden.md
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:21
+                    _notes/.obsidian/workspace
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:25
+                    _notes/.obsidian/workspace
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:35
+                    _notes/my new digital garden.md
+                    ...done in 0.123728 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:39
+                    _notes/my new digital garden.md
+                    ...done in 0.1120981 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:44
+                    _notes/my new digital garden.md
+                    ...done in 0.1239539 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:47
+                    _notes/.obsidian/workspace
+                    ...done in 0.1639935 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:50
+                    _notes/.obsidian/workspace
+                    ...done in 0.1258006 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:54
+                    _notes/.obsidian/workspace
+                    ...done in 0.1137085 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:53:55
+                    _notes/.obsidian/workspace
+                    ...done in 0.1116124 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:54:31
+                    _notes/my new digital garden.md
+                    ...done in 0.1081859 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:54:35
+                    _notes/my new digital garden.md
+                    ...done in 0.1043574 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:54:40
+                    _notes/my new digital garden.md
+                    ...done in 0.1050005 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:54:56
+                    _notes/my new digital garden.md
+                    ...done in 0.1796905 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:54:59
+                    _notes/my new digital garden.md
+                    ...done in 0.1229128 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:55:05
+                    _notes/my new digital garden.md
+                    ...done in 0.1355895 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:55:35
+                    _notes/my new digital garden.md
+                    ...done in 0.1296063 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:28
+                    _notes/improve my thinking.md
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:29
+                    _notes/.obsidian/workspace
+             Error: Invalid argument @ rb_sysopen - C:/Users/Holger/my-digital-garden/_site/:slug.md
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:34
+                    _notes/improve my thinking.md
+                    ...done in 0.1660759 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:37
+                    _notes/improve my thinking.md
+                    ...done in 0.1416095 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:39
+                    _notes/improve my thinking.md
+                    ...done in 0.1061511 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:41
+                    _notes/improve my thinking.md
+                    ...done in 0.2934991 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:45
+                    _notes/improve my thinking.md
+                    ...done in 0.1364557 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:47
+                    _notes/improve my thinking.md
+                    ...done in 0.1323641 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:49
+                    _notes/improve my thinking.md
+                    ...done in 0.1216954 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:51
+                    _notes/improve my thinking.md
+                    ...done in 0.1585185 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:53
+                    _notes/improve my thinking.md
+                    ...done in 0.1273583 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:56:56
+                    _notes/improve my thinking.md
+                    ...done in 0.1343973 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:57:00
+                    _notes/.obsidian/workspace
+                    ...done in 0.1473226 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 09:57:01
+                    _notes/.obsidian/workspace
+                    ...done in 0.1956039 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:18:23
+                    _notes/.obsidian/workspace
+                    ...done in 0.2027413 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:38
+                    _notes/your-first-note.md
+                    ...done in 0.1413858 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:39
+                    _notes/.obsidian/workspace
+                    ...done in 0.1356517 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:43
+                    _notes/cats.md
+                    ...done in 0.1596672 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:44
+                    _notes/.obsidian/workspace
+                    ...done in 0.1831063 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:48
+                    _notes/consistency.md
+                    ...done in 0.1342516 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:49
+                    _notes/.obsidian/workspace
+                    ...done in 0.1323023 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:55
+                    _notes/.obsidian/workspace
+                    ...done in 0.1405126 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:58
+                    _notes/.obsidian/workspace
+                    ...done in 0.1612333 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:19:59
+                    _notes/move your body every day.md
+                    ...done in 0.1404371 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:20:00
+                    _notes/.obsidian/workspace
+                    ...done in 0.1117274 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:20:02
+                    _notes/.obsidian/workspace
+                    ...done in 0.1121497 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:32
+                    _notes/.obsidian/workspace
+                    ...done in 0.1391958 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:37
+                    _notes/.obsidian/workspace
+                    ...done in 0.1800926 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:41
+                    _notes/.obsidian/workspace
+                    ...done in 0.1226946 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:46
+                    _notes/improve my thinking.md
+                    ...done in 0.1094037 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:49
+                    _notes/improve my thinking.md
+                    ...done in 0.1056001 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:51
+                    _notes/improve my thinking.md
+                    ...done in 0.1185022 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:53
+                    _notes/improve my thinking.md
+                    ...done in 0.1036092 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:55
+                    _notes/improve my thinking.md
+                    ...done in 0.1293076 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:32:58
+                    _notes/improve my thinking.md
+                    ...done in 0.1346699 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:33:01
+                    _notes/improve my thinking.md
+                    ...done in 0.1279935 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:33:03
+                    _notes/improve my thinking.md
+                    ...done in 0.1305583 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:33:05
+                    _notes/improve my thinking.md
+                    ...done in 0.1585078 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:45:58
+                    _notes/improve my thinking.md
+                    ...done in 0.09948 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:00
+                    _notes/improve my thinking.md
+                    ...done in 1.6512547 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:03
+                    _notes/improve my thinking.md
+                    ...done in 0.3205079 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:05
+                    _notes/improve my thinking.md
+                    ...done in 0.1345242 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:12
+                    _notes/improve my thinking.md
+                    ...done in 0.1169106 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:16
+                    _notes/improve my thinking.md
+                    ...done in 0.1720593 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:18
+                    _notes/improve my thinking.md
+                    ...done in 0.167206 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:20
+                    _notes/improve my thinking.md
+                    ...done in 0.1324514 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:28
+                    _notes/improve my thinking.md
+                    ...done in 0.1323421 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-26 10:46:34
+                    _notes/improve my thinking.md
+                    ...done in 0.1212574 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 06:29:02
+                    _notes/improve my thinking.md
+                    ...done in 5.3446156 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 06:29:07
+                    _notes/improve my thinking.md
+                    ...done in 1.4446665 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 06:29:09
+                    _notes/improve my thinking.md
+                    ...done in 10.1633662 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 06:29:19
+                    _notes/improve my thinking.md
+                    ...done in 0.2085241 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 06:29:21
+                    _notes/improve my thinking.md
+                    ...done in 0.986549 seconds.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 12:57:59
+                    _includes/footer.html
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 13:05:47
+                    _pages/about.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 13:11:11
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:03
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:09
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:11
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:14
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:16
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:19
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:21
+                    _notes/improve my thinking.md
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:27
+                    _notes/.obsidian/workspace
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
+      Regenerating: 1 file(s) changed at 2021-05-27 16:44:28
+                    _notes/.obsidian/workspace
+  Liquid Exception: invalid byte sequence in UTF-8 in C:/Users/Holger/my-digital-garden/_layouts/default.html
+             Error: invalid byte sequence in UTF-8
+             Error: Run jekyll build --trace for more information.
+
